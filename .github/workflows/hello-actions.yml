@@ -1,0 +1,17 @@
+# Workflows konfigurieren (Metadaten)
+name: Hello World Worflow
+description: Nur eine demo
+
+# Events
+on: push
+
+# Jobs (Aufgaben)...
+jobs:
+    say-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Ziehe das Projekt
+              uses: actions/checkout@v4.2.2
+            
+            - name: JavaScript ausführen
+              run: node ./test/hello-world.js
